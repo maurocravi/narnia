@@ -1,0 +1,175 @@
+<section class=" bg-black text-white  h-screen">
+
+    <!-- Header -->
+    <header class=" text-white backdrop-blur-sm absolute top-0 z-50 w-full">
+        <nav class=" flex justify-between px-32 py-2">
+            <ul>
+                <li>
+                    <p class=" font-CormorantGaramond">Las Cronicas de <span class=" font-Cinzel">Narnia</span></p>
+                </li>
+            </ul>
+
+            <ul class=" flex space-x-9">
+                <li><a href="">Comprar</a></li>
+                <li><a href="">Sobre C.S Lewis</a></li>
+                <li><a href="">Version Simplificada</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--IMAGEN DE FONDO -->
+
+<main class=" flex">
+
+    <picture class=" absolute">
+        <img class=" object-cover object-center blur-sm" src="sobrino-bg-1.jpg" alt="">
+    </picture>
+    
+
+<div class=" 2xl:text-red-400  w-full flex flex-col justify-center z-50">
+
+
+    <!-- TITULO DEL LIBRO -->
+
+    <div class=" flex w-full justify-center mt-20">
+        <h1 class=" text-7xl text-[#468585] font-Tangerine font-bold">El Sobrino del Mago</h1>
+    </div>
+
+
+
+    <!-- IMAGEN DEL LIBRO Y DESCRIPCION -->
+    <div class=" flex gap-10 mt-32 px-32  w-full justify-center">
+        <div>
+            <a 
+  class="book-container"
+  href=""
+  target="_blank"
+  rel="noreferrer noopener"
+>
+  <div class="book">
+    <img
+      alt=""
+      src="https://clcuruguay.com/_CLCUruguay/images/products/large/5392.jpg"
+      />
+  </div>
+</a>
+
+<!-- DESCRIPCION -->
+        </div>
+
+        <div class=" relative py-10">
+            <p class=" text-wrap text-left max-w-[500px] ">El sobrino del mago (título original en inglés: The Magician's Nephew) es una novela de fantasía de la serie Las Crónicas de Narnia, Es literatura juvenil creada por parte de C. S. Lewis. Esta obra fue escrita en 1951 y publicada en 1955. Es la sexta en el orden de publicación, pero es la primera en el orden cronológico. Por consiguiente es un ejemplo de una precuela, e incluye algunas referencias a los libros publicados previamente, en especial a The Lion, the Witch and the Wardrobe.</p>
+
+            <div class=" flex mt-10">
+                <a href="">Comprar</a>
+                <a href="">Mas detalles</a>
+            </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</main>
+</section>
+<style>
+    .book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.book {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book-container:hover .book, 
+.book-container:focus .book {
+  transform: rotateY(0deg);
+}
+
+.book > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 250px;
+  height: 350px;
+  transform: translateZ(15px);
+  background-color: #468585;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 5px 5px 20px #666;
+}
+
+.book::before {
+  position: absolute;
+  content: ' ';
+  background-color: blue;
+  left: 0;
+  top: 1px;
+  width: 28px;
+  height: 348px;
+  transform: translateX(234px) rotateY(90deg);
+  background: linear-gradient(90deg, 
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+    );
+}
+
+.book::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 250px;
+  height: 350px;
+  transform: translateZ(-15px);
+  background-color: #468585;
+  border-radius: 0 2px 2px 0;
+  box-shadow: -10px 0 50px 10px #666;
+}
+</style>
